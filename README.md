@@ -1,40 +1,46 @@
 # Big-Data-Engineering-Project-Real-Time-Finance-Data-Processing
 
-#Overview
+##Overview
 
 This project demonstrates a data engineering pipeline designed to collect, process, store, and visualize financial transaction data in real-time. The pipeline leverages Hadoop, Kafka, Flume, Spark, and cloud databases to handle streaming data with a focus on scalability, analysis, and visualization.
 
-#Pipeline Summary
+##Pipeline Summary
 
-Data Collection: A Python script generates synthetic financial transaction data, saving it locally as JSON files.
-Ingestion: Apache Flume ingests data from the local filesystem, forwarding it to Apache Kafka.
-Storage & Processing:
-Flume transfers a copy of the data from Kafka (acting as a consumer) to HDFS.
-Spark processes data from Kafka in real time, sending processed data to InfluxDB.
-Storage in Cloud: Processed data is stored in InfluxDB on the cloud for analytics.
-Analysis & Visualization: Grafana Cloud visualizes the stored data, creating real-time insights and dashboards for monitoring transaction metrics and trends.
+- **Data Collection**: A Python script generates synthetic financial transaction data, saving it locally as JSON files.
+- **Ingestion**: Apache Flume ingests data from the local filesystem, forwarding it to Apache Kafka.
+- **Storage & Processing**: 
+  - Flume transfers a copy of the data from Kafka to HDFS.
+  - Spark processes data from Kafka in real-time, sending processed data to InfluxDB.
+- **Cloud Storage**: Processed data is stored in InfluxDB on the cloud for analytics.
+- **Analysis & Visualization**: Grafana Cloud visualizes the stored data, creating real-time insights and dashboards for monitoring transaction metrics and trends.
+
 
 ![image](https://github.com/user-attachments/assets/b2bef479-63fa-4aae-a564-f72f71ae365b)
 
-Project Architecture
-Data Generator Script: This Python script creates random transaction data and saves it as JSON files.
-Apache Flume:
-Transfers data from JSON files to Kafka and then forwards it to HDFS.
-Manages data ingestion from Kafka to ensure reliable data delivery.
-Apache Kafka: Manages the streaming data, buffering events between producers and consumers.
-Apache Spark: Consumes data from Kafka for real-time data processing and transformation.
-InfluxDB: Stores processed data in a cloud database for time-series analytics.
-Grafana Cloud: Provides a platform for real-time visualization, allowing interactive dashboards to monitor transaction metrics.
-Prerequisites
-CentOS 6.5 (or any compatible environment)
-Hadoop for distributed storage
-Apache Flume for data ingestion
-Apache Kafka for data streaming
-Apache Spark for real-time processing
-InfluxDB Cloud for cloud-based storage
-Grafana Cloud for visualization
+## Project Architecture
+
+1. **Data Generator Script**: This Python script creates random transaction data and stores it as JSON files.
+2. **Apache Flume**: 
+   - Transfers data from JSON files to Kafka and then forwards it to HDFS.
+   - Manages data ingestion from Kafka to ensure reliable data delivery.
+3. **Apache Kafka**: Manages the streaming data, buffering events between producers and consumers.
+4. **Apache Spark**: Consumes data from Kafka for real-time data processing and transformation.
+5. **InfluxDB**: Stores processed data in a cloud database for time-series analytics.
+6. **Grafana Cloud**: Provides a platform for real-time visualization, allowing interactive dashboards to monitor transaction metrics.
+
+## Prerequisites
+
+- CentOS 6.5 (or any compatible environment)
+- Hadoop for distributed storage
+- Apache Flume for data ingestion
+- Apache Kafka for data streaming
+- Apache Spark for real-time processing
+- InfluxDB Cloud for cloud-based storage
+- Grafana Cloud for visualization
+
 Ensure that all components are installed and configured according to the project setup and environment.
 
+## Project Setup
 Project Setup
 1. Data Generator Script
 The script generates synthetic financial transaction data, storing it in a specified local directory.
