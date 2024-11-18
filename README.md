@@ -1,8 +1,6 @@
 # Big-Data-Engineering-Project-Real-Time-Finance-Data-Processing
 This project demonstrates a data engineering pipeline designed to collect, process, store, and visualize financial transaction data in real-time. The pipeline leverages Hadoop, Kafka, Flume, Spark, and cloud databases to handle streaming data with a focus on scalability, analysis, and visualization.
 
-This project demonstrates a data engineering pipeline designed to collect, process, store, and visualize financial transaction data in real-time. The pipeline leverages Hadoop, Kafka, Flume, Spark, and cloud databases to handle streaming data with a focus on scalability, analysis, and visualization.
-
 Pipeline Summary
 Data Collection: A Python script generates synthetic financial transaction data, saving it locally as JSON files.
 Ingestion: Apache Flume ingests data from the local filesystem, forwarding it to Apache Kafka.
